@@ -9,29 +9,30 @@ from __future__ import annotations
 # Local Module Imports
 # =====================
 from client import get_response
+from chat_helpers import print_initial_greeting, print_exit_message, get_user_input, print_constance_response
 
 # ===========================
 # Sister Constance main loop
 # ===========================
 def main() -> None:
-    print("Sister Constance awaits. Speak. (type 'quit' to exit)")
+    print_initial_greeting()
 
+    # Begin main interaction loop
     while True:
-        user_input = input("You: ").strip()
+        user_input = get_user_input()
         
         if user_input.lower() == "quit":
-            print("Constance: Go, then. Endure the road before you.")
+            print_exit_message()
             break
         
         if not user_input:
             continue 
 
         reply = get_response(user_input)
-        print(f"Constance: {reply}")
+        print_constance_response(reply)
 
 # ============
 # Call Main()
 # ============
-
 if __name__ == "__main__":
     main()
