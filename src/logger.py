@@ -32,11 +32,13 @@ LOG_FILE_PATH = Path("logs/sister_constance.jsonl")
 def log_interaction(user_input: str, response: str) -> None:
     # prepare information for the logging entry
     timestamp = datetime.now().isoformat()
+    clean_input = user_input.replace("\n", " ")
+    clean_response = response.replace("\n", " ")
 
     log = {
         "timestamp": timestamp,
-        "user_input": user_input,
-        "model_response": response,
+        "user_input": clean_input,
+        "model_response": clean_response,
     }
 
     jsonl_log = json.dumps(log) + "\n" # convert Python dict to JSONL
