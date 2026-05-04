@@ -41,6 +41,5 @@ python main.py
 - No memory or logging yet
 
 ## 🧠 Future Improvements
-- Refactor main loop 
-- Add logging
+- Expand logging
 - Add memory
