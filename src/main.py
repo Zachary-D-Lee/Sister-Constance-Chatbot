@@ -10,6 +10,7 @@ from __future__ import annotations
 # =====================
 from client import get_response
 from chat_helpers import print_initial_greeting, print_exit_message, get_user_input, print_constance_response
+from logger import log_interaction
 
 # ===========================
 # Sister Constance main loop
@@ -29,6 +30,7 @@ def main() -> None:
             continue 
 
         reply = get_response(user_input)
+        log_interaction(user_input, reply)
         print_constance_response(reply)
 
 # ============
