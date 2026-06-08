@@ -8,6 +8,7 @@ Sister Constance speaks with a disciplined and unwavering voice and addresses th
 - Terminal-based interaction loop
 - Environment-based API key management
 - Modular structure (main, client, persona)
+- Basic logging
 
 ## 🚀 Run
 1) Create and activate a virtual environment:
